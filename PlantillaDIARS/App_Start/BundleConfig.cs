@@ -23,8 +23,10 @@ namespace PlantillaDIARS
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-spacelab.css",
                       "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/bundles/fa", "https://kit.fontawesome.com/e1143320de.js").Include(
+                "~/Content/font-awesome.min.js"));
         }
     }
 }

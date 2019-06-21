@@ -7,33 +7,120 @@
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/fa")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-            </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">DIARS PÁCTICA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("About", "About", null,new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Contact", "Contact", null, new { @class = "nav-link" })
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-        </footer>
+        <!-- Footer -->
+            <footer class="page-footer font-small indigo">
+
+                <!-- Footer Links -->
+                <div class="container text-center text-md-left">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 mx-auto colum">
+
+                            <!-- Links -->
+                            <h5 class="font-weight-bold text-white mt-3 mb-4">Getting started</h5>
+
+                            <ul class="list-unstyled">
+                                <p class="text-justify">
+                                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                                    enables a clean separation of concerns and gives you full control over markup
+                                    for enjoyable, agile development.
+                                </p>
+
+                            </ul>
+                            <p><a class="btn btn-default m-auto" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="clearfix w-100 d-md-none">
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 mx-auto colum">
+
+                            <!-- Links -->
+                            <h5 class="font-weight-bold text-white mt-3 mb-4">Get more libraries</h5>
+
+                            <ul class="list-unstyled">
+                                <p class="text-justify">
+                                    NuGet is a free Visual Studio extension that makes it easy to add, remove,
+                                    and update libraries and tools in Visual Studio projects.
+                                </p>
+
+                            </ul>
+                            <p><a class="btn btn-default m-auto" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="clearfix w-100 d-md-none">
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 mx-auto colum">
+
+                            <!-- Links -->
+                            <h5 class="font-weight-bold text-white mt-3 mb-4">Web Hosting</h5>
+
+                            <ul class="list-unstyled">
+                                <p>
+                                    You can easily find a web hosting company that offers the right
+                                    mix of features and price for your applications.
+                                </p>
+
+                            </ul>
+                            <p><a class="btn btn-default m-auto" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <hr class="clearfix w-100 d-md-none">
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Footer Links -->
+
+                <div class="uSep">
+                    <hr />
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center text-white py-3">
+                    <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- Footer -->
+        
     </div>
 
     @Scripts.Render("~/bundles/jquery")
