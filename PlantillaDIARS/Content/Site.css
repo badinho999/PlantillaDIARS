@@ -24,11 +24,11 @@ body
     line-height: 1.5em;
 }
 
-    .indigo .container .row .colum ul p, .indigo .container .row .colum a
+    .indigo .container .row .colum ul li a
     {
         color: #8aadbf;
     }
-    .indigo .container .row .colum a:hover
+    .indigo .container .row .colum ul li a:hover
     {
         color: white;
     }

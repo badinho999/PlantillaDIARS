@@ -1,0 +1,26 @@
+﻿
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">DIARS PÁCTICA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("About", "About", null, new { @class = "nav-link" })
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Contact", "Contact", null, new { @class = "nav-link" })
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item accountItem" hidden><a class="nav-link" href="#"><i class="far fa-user"></i> Account</a></li>
+            <li class="nav-item logItem"><a class="nav-link" data-toggle="modal" data-target="#signUp"><i class="far fa-user"></i> Sign Up</a></li>
+            <li class="nav-item logItem"><a class="nav-link" data-toggle="modal" data-target="#mlogin"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        </ul>
+    </div>
+</nav>

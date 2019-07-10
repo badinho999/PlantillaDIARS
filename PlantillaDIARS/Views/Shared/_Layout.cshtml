@@ -1,130 +1,111 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <!--Font Awesome-->
     @Scripts.Render("~/bundles/fa")
+    @Scripts.Render("~/bundles/modernizr")
+
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">DIARS PÁCTICA</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("About", "About", null,new { @class = "nav-link" })
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Contact", "Contact", null, new { @class = "nav-link" })
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    @Html.Partial("_navBar")
     <div class="container body-content">
+        <div class="alert_info"></div>
         @RenderBody()
+        @Html.Partial("_SignUp")
+        @Html.Partial("_LogIn")
+
         <hr />
         <!-- Footer -->
-            <footer class="page-footer font-small indigo">
+        <footer class="page-footer font-small indigo">
 
-                <!-- Footer Links -->
-                <div class="container text-center text-md-left">
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
 
-                    <!-- Grid row -->
-                    <div class="row">
+                <!-- Grid row -->
+                <div class="row">
 
-                        <!-- Grid column -->
-                        <div class="col-md-3 mx-auto colum">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto colum">
 
-                            <!-- Links -->
-                            <h5 class="font-weight-bold text-white mt-3 mb-4">Getting started</h5>
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-white mt-3 mb-4">Iniciando</h5>
 
-                            <ul class="list-unstyled">
-                                <p class="text-justify">
-                                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                                    enables a clean separation of concerns and gives you full control over markup
-                                    for enjoyable, agile development.
-                                </p>
-
-                            </ul>
-                            <p><a class="btn btn-default m-auto" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <hr class="clearfix w-100 d-md-none">
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 mx-auto colum">
-
-                            <!-- Links -->
-                            <h5 class="font-weight-bold text-white mt-3 mb-4">Get more libraries</h5>
-
-                            <ul class="list-unstyled">
-                                <p class="text-justify">
-                                    NuGet is a free Visual Studio extension that makes it easy to add, remove,
-                                    and update libraries and tools in Visual Studio projects.
-                                </p>
-
-                            </ul>
-                            <p><a class="btn btn-default m-auto" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <hr class="clearfix w-100 d-md-none">
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 mx-auto colum">
-
-                            <!-- Links -->
-                            <h5 class="font-weight-bold text-white mt-3 mb-4">Web Hosting</h5>
-
-                            <ul class="list-unstyled">
-                                <p>
-                                    You can easily find a web hosting company that offers the right
-                                    mix of features and price for your applications.
-                                </p>
-
-                            </ul>
-                            <p><a class="btn btn-default m-auto" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <hr class="clearfix w-100 d-md-none">
-
+                        <ul class="list-unstyled">
+                            <li>Cree su sitio web dinámico</li>
+                            <li>Desarrollo agradable y ágil</li>
+                            <li>Plataforma potente</li>
+                            <li><a class="btn btn-default m-auto linkMore" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></li>
+                        </ul>
                     </div>
-                    <!-- Grid row -->
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto colum">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-white mt-3 mb-4">Adapta tu proyecto</h5>
+
+                        <ul class="list-unstyled">
+                            <li>Use su propia lógica</li>
+                            <li>Use Bundles</li>
+                            <li>Adapte su Base de Datos</li>
+                            <li><a class="btn btn-default m-auto linkMore" href="https://github.com/badinho999/PlantillaDIARS.git">Learn more &raquo;</a></li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto colum">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-white mt-3 mb-4">Alojamiento Web</h5>
+
+                        <ul class="list-unstyled">
+                            <li>Encuentre la compañía que más le convenga</li>
+                            <li>Despliegue su sitio web</li>
+                            <li><a class="btn btn-default m-auto linkMore" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
 
                 </div>
-                <!-- Footer Links -->
+                <!-- Grid row -->
 
-                <div class="uSep">
-                    <hr />
-                </div>
+            </div>
+            <!-- Footer Links -->
 
-                <!-- Copyright -->
-                <div class="footer-copyright text-center text-white py-3">
-                    <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
-                </div>
-                <!-- Copyright -->
+            <div class="uSep">
+                <hr />
+            </div>
 
-            </footer>
-            <!-- Footer -->
-        
+            <!-- Copyright -->
+            <div class="footer-copyright text-center text-white py-3">
+                <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/main")
     @RenderSection("scripts", required: false)
+    
 </body>
 </html>

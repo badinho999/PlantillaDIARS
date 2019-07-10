@@ -1,0 +1,102 @@
+﻿<!-- Modal Cliente-->
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>Número de DNI</label>
+                        <input type="text" class="form-control" id="dni" maxlength="8" placeholder="DNI" />
+                        <span id="dniVal" style="display: none;">Debe contener 8 caracteres</span>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" />
+                        <span id="apeVal" style="display: none;">Completa este campo</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" />
+                        <span id="nameVal" style="display: none;">Completa este campo</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de nacimiento</label>
+                        <input type="text" class="form-control" id="fn" placeholder="MM/dd/yyyy" />
+                        <span id="dateVal" style="display: none;">Completa este campo</span>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rbS" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rbS" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Femenino
+                            </label>
+                        </div>
+                        <span id="rbsVal" style="display: none;">Selecciona uno</span>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnSave" onclick="return signUp();">Continuar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cuenta-->
+<div class="modal fade" id="maccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
+                <button type="button" class="close" data-dismiss="modal" onclick="return deleteClient();" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="accountModal">
+                    <div class="form-group">
+                        <label>Nombre de usuario</label>
+                        <input type="text" class="form-control" id="username" placeholder="Username" />
+                        <span id="usrVal" style="display: none;">Completa este campo</span>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" />
+                        <span id="emailVal" style="display: none;">Completa este campo</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" class="form-control" id="pass" placeholder="Password" />
+                        <span id="passVal" style="display: none;">Completa este campo</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Teléfono" />
+                        <span id="phoneVal" style="display: none;">Completa este campo</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="return deleteClient()">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="btnEnd" onclick="return signUpEnd();">Finalizar</button>
+            </div>
+        </div>
+    </div>
+</div>
